@@ -1,0 +1,25 @@
+{
+  "name": "api-bke-express",
+  "version": "1.0.0",
+  "description": "api node com express para backend do terceiro semestre",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GArci4rock/apibkeexpress.git"
+  },
+  "keywords": [
+    "api",
+    "express",
+    "zod",
+    "mvc"
+  ],
+  "author": "Matheus Garcia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GArci4rock/apibkeexpress/issues"
+  },
+  "homepage": "https://github.com/GArci4rock/apibkeexpress#readme"
+}
