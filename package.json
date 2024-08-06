@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "api node com express para backend do terceiro semestre",
   "main": "src/server.js",
+  "type":"module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
   },
   "repository": {
     "type": "git",
@@ -21,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/GArci4rock/apibkeexpress/issues"
   },
-  "homepage": "https://github.com/GArci4rock/apibkeexpress#readme"
+  "homepage": "https://github.com/GArci4rock/apibkeexpress#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
 }
