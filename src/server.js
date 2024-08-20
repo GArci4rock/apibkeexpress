@@ -14,5 +14,5 @@ app.use('/account', accountRouter)
 
 
 app.listen(PORT,() => {
-console.log(`Messi logado na porta  ${ ENVIRONMENT} em ${HOST}:${PORT}`)
+console.log(`Messi logado na porta ${ ENVIRONMENT} em ${HOST}:${PORT}`)
 })
