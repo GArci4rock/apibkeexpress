@@ -13,5 +13,5 @@ app.use('/account', accountRouter)
 
 
 app.listen(3000,() => {
-console.log('Messi logado na porta http://localhost:3000')
+console.log(`Messi logado na porta http://localhost:3000 ${ process.env.AMBIENTE}`)
 })
