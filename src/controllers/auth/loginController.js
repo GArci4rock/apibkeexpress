@@ -1,6 +1,5 @@
 const login = (req, res) => {
-    res.json(
-        {message:"Olá Messi brasileiro! ROTA DE POST LOGIN"
-    })}
-    
+    res.json({message: "Rota de POST Auth/Login"})
+}
+
 export default login
