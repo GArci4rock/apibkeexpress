@@ -1,5 +1,39 @@
 import {PrismaClient} from '@prisma/client'
+
+import { z } from 'zod'
+import account from '../controllers/account/accountController'
+
 const prisma = new PrismaClient()
+
+const accountSchema = z.object({
+    id:   z.number().positive(),     
+  service: z.string().min(1).max(255),
+  username: z.string().min(3).max(255),
+  logo_image: z.string().url().min(11).max(1000).optional(),
+  pass: z.string().min(6).max(500),
+  user_id: z.number().positive()
+})
+
+export const accountValidateToCreate = (account) => {
+    const partialAccountSchema = accountSchema.partial({id: true})
+    return partialAccountSchema.safeParse(account)
+}
+
+export const accountValidateToUpdate = (account) => {
+    return accountSchema.safeParse(account)
+}
+
+export const accountValidateId = (id) => {
+    const partialAccountSchema = accountSchema.partial({
+        service: true,
+        username:true,
+        pass: true,
+        user_id: true
+    })
+    return partialAccountSchema.safeParse(id)
+}
+
+
 
 export const listAccounts = async () => {
     const accounts = await prisma.account.findMany({
